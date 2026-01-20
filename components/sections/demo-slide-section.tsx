@@ -4,32 +4,32 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const languages = [
-  { 
-    id: "ko", 
-    name: "한국어", 
+  {
+    id: "ko",
+    name: "한국어",
     flag: "🇰🇷",
-    //title: "한국어로 말하는 디지털 트윈",
-    //description: "네이티브 수준의 한국어 발음과 자연스러운 표정으로 국내 팬들과 소통합니다."
-    title: "coming soon",
-    description: "coming soon"
+    title: "한국어로 말하는 디지털 트윈",
+    description: "네이티브 수준의 한국어 발음과 자연스러운 표정으로 국내 팬들과 소통합니다.",
+    videoSrc: "/videos/korean.mp4",
+    posterSrc: "",
   },
-  { 
-    id: "en", 
-    name: "English", 
+  {
+    id: "en",
+    name: "English",
     flag: "🇺🇸",
-    //title: "Digital Twin Speaking English",
-    //description: "글로벌 시장을 향한 완벽한 영어 커뮤니케이션을 실현합니다."
-    title: "coming soon",
-    description: "coming soon"
+    title: "Digital Twin Speaking English",
+    description: "글로벌 시장을 향한 완벽한 영어 커뮤니케이션을 실현합니다.",
+    videoSrc: "/videos/english.mp4",
+    posterSrc: "",
   },
-  { 
-    id: "jp", 
-    name: "日本語", 
+  {
+    id: "jp",
+    name: "日本語",
     flag: "🇯🇵",
-    //title: "日本語を話すデジタルツイン",
-    //description: "일본 시장을 위한 자연스러운 일본어 립싱크와 보이스를 제공합니다."
-    title: "coming soon",
-    description: "coming soon"
+    title: "日本語を話す 디지털ツイン",
+    description: "일본 시장을 위한 자연스러운 일본어 립싱크와 보이스를 제공합니다.",
+    videoSrc: "/videos/japanese.mp4",
+    posterSrc: "",
   },
 ]
 
@@ -94,18 +94,31 @@ export function DemoSlideSection() {
               transition={{ duration: 0.3 }}
               className="bg-white rounded-2xl border border-[#E5E7EB] overflow-hidden"
             >
-              {/* Video Placeholder */}
-              <div className="aspect-video bg-gradient-to-br from-[#F9FAFB] to-[#E5E7EB] flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-4 bg-[#111111] rounded-full flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <title>Play button</title>
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
+              {/* Video */}
+              {currentLanguage.videoSrc ? (
+                <video
+                  className="aspect-video w-full bg-black"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster={currentLanguage.posterSrc || undefined}
+                >
+                  <source src={currentLanguage.videoSrc} type="video/mp4" />
+                  브라우저가 비디오 태그를 지원하지 않습니다.
+                </video>
+              ) : (
+                <div className="aspect-video bg-gradient-to-br from-[#F9FAFB] to-[#E5E7EB] flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-20 h-20 mx-auto mb-4 bg-[#111111] rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <title>Play button</title>
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                    <p className="text-[#6B7280] text-sm">데모 영상 재생</p>
                   </div>
-                  <p className="text-[#6B7280] text-sm">데모 영상 재생</p>
                 </div>
-              </div>
+              )}
 
               {/* Content */}
               <div className="p-8">
