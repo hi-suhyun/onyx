@@ -23,16 +23,33 @@ export function ContactFormSection() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    setErrorMessage("")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "contact",
+          ...formData
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error("메일 전송 실패")
+      }
+
+      setIsSubmitted(true)
+    } catch (error) {
+      setErrorMessage("전송에 실패했습니다. 잠시 후 다시 시도해주세요.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (
@@ -232,6 +249,10 @@ export function ContactFormSection() {
                 </>
               )}
             </button>
+
+            {errorMessage && (
+              <p className="text-center text-sm text-red-600">{errorMessage}</p>
+            )}
 
             <p className="text-center text-sm text-[#6B7280]">
               문의 주시면 3시간 내에 맞춤형 데모 영상과 단가표를 보내드립니다.
