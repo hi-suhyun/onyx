@@ -58,7 +58,13 @@ export function CTASection() {
             <span className="text-white/60">비즈니스는 무한히 확장합니다.</span>
           </h2>
           <p className="mt-6 text-lg text-white/60 max-w-xl mx-auto">
-            지금 바로 Onyx와 함께 스타 IP의 새로운 가능성을 열어보세요.
+            <span className="sm:hidden">
+              <span className="block">지금 바로 Onyx와 함께 스타 IP의</span>
+              <span className="block">새로운 가능성을 열어보세요.</span>
+            </span>
+            <span className="hidden sm:inline">
+              지금 바로 Onyx와 함께 스타 IP의 새로운 가능성을 열어보세요.
+            </span>
           </p>
         </motion.div>
 

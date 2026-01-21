@@ -20,9 +20,16 @@ export default function ContactPage() {
             Contact
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-[#111111] tracking-tight text-balance">
-            지금 바로 스타의 목소리로
-            <br />
-            <span className="text-[#6B7280]">귀사의 가치를 높이세요</span>
+            <span className="sm:hidden">
+              <span className="block">지금 바로</span>
+              <span className="block">스타의 목소리로</span>
+              <span className="block text-[#6B7280]">귀사의 가치를 높이세요</span>
+            </span>
+            <span className="hidden sm:inline">
+              지금 바로 스타의 목소리로
+              <br />
+              <span className="text-[#6B7280]">귀사의 가치를 높이세요</span>
+            </span>
           </h1>
           <p className="mt-6 text-lg text-[#6B7280] max-w-2xl mx-auto">
             문의 주시면 맞춤형 데모 영상과 단가표를 보내드립니다.

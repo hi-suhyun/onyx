@@ -84,7 +84,13 @@ export function WorkflowSection() {
             5단계 워크플로우
           </h2>
           <p className="mt-4 text-lg text-[#6B7280] max-w-2xl mx-auto">
-            체계적인 프로세스를 통해 안전하고 효율적인 디지털 트윈 제작을 보장합니다.
+            <span className="sm:hidden">
+              <span className="block">체계적인 프로세스를 통해 안전하고</span>
+              <span className="block">효율적인 디지털 트윈 제작을 보장합니다.</span>
+            </span>
+            <span className="hidden sm:inline">
+              체계적인 프로세스를 통해 안전하고 효율적인 디지털 트윈 제작을 보장합니다.
+            </span>
           </p>
         </motion.div>
 

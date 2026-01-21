@@ -72,7 +72,13 @@ export function PainPointSection() {
             기존 방식의 한계를 넘어서다
           </h2>
           <p className="mt-4 text-lg text-[#6B7280] max-w-2xl mx-auto">
-            기존 스타 비즈니스의 물리적 한계와 Onyx의 디지털 트윈 솔루션을 비교해보세요.
+            <span className="sm:hidden">
+              <span className="block">기존 스타 비즈니스의 물리적 한계와</span>
+              <span className="block">Onyx의 디지털 트윈 솔루션을 비교해보세요.</span>
+            </span>
+            <span className="hidden sm:inline">
+              기존 스타 비즈니스의 물리적 한계와 Onyx의 디지털 트윈 솔루션을 비교해보세요.
+            </span>
           </p>
         </motion.div>
 

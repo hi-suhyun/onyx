@@ -48,7 +48,13 @@ export function ServiceAreasSection() {
             3대 핵심 솔루션
           </h2>
           <p className="mt-4 text-lg text-[#6B7280] max-w-2xl mx-auto">
-            Onyx는 각 비즈니스 목적에 맞는 최적화된 솔루션을 제공합니다.
+            <span className="sm:hidden">
+              <span className="block">Onyx는 각 비즈니스 목적에 맞는</span>
+              <span className="block">최적화된 솔루션을 제공합니다.</span>
+            </span>
+            <span className="hidden sm:inline">
+              Onyx는 각 비즈니스 목적에 맞는 최적화된 솔루션을 제공합니다.
+            </span>
           </p>
         </motion.div>
 

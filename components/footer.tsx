@@ -12,7 +12,13 @@ export function Footer() {
               Onyx
             </Link>
             <p className="mt-3 text-sm text-[#6B7280] max-w-xs">
-              스타의 시간을 데이터로 해방하고, IP의 가능성을 무한히 확장합니다.
+              <span className="sm:hidden">
+                <span className="block">스타의 시간을 데이터로 해방하고,</span>
+                <span className="block">IP의 가능성을 무한히 확장합니다.</span>
+              </span>
+              <span className="hidden sm:inline">
+                스타의 시간을 데이터로 해방하고, IP의 가능성을 무한히 확장합니다.
+              </span>
             </p>
           </div>
 

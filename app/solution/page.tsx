@@ -25,7 +25,13 @@ export default function SolutionPage() {
             AI 디지털 트윈 솔루션
           </h1>
           <p className="mt-6 text-lg text-[#6B7280] max-w-2xl mx-auto">
-            스타의 IP 가치를 보존하면서 무한한 비즈니스 확장을 가능하게 합니다.
+            <span className="sm:hidden">
+              <span className="block">스타의 IP 가치를 보존하면서</span>
+              <span className="block">무한한 비즈니스 확장을 가능하게 합니다.</span>
+            </span>
+            <span className="hidden sm:inline">
+              스타의 IP 가치를 보존하면서 무한한 비즈니스 확장을 가능하게 합니다.
+            </span>
           </p>
         </div>
       </section>

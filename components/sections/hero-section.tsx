@@ -23,9 +23,17 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#111111] leading-tight tracking-tight text-balance"
         >
-          스타의 시간을 데이터로 해방하고,
-          <br />
-          <span className="text-[#6B7280]">IP의 가능성을 무한히 확장합니다.</span>
+          <span className="sm:hidden">
+            <span className="block">스타의 시간을</span>
+            <span className="block">데이터로 해방하고,</span>
+            <span className="block text-[#6B7280]">IP의 가능성을</span>
+            <span className="block">무한히 확장합니다.</span>
+          </span>
+          <span className="hidden sm:inline">
+            스타의 시간을 데이터로 해방하고,
+            <br />
+            <span className="text-[#6B7280]">IP의 가능성을 무한히 확장합니다.</span>
+          </span>
         </motion.h1>
 
         <motion.p

@@ -9,7 +9,7 @@ const languages = [
     name: "한국어",
     flag: "🇰🇷",
     title: "한국어로 말하는 디지털 트윈",
-    description: "네이티브 수준의 한국어 발음과 자연스러운 표정으로 국내 팬들과 소통합니다.",
+    description: "네이티브 수준의 한국어 발음과 자연스러운 표정을 구현합니다.",
     videoSrc: "/videos/korean.mp4",
     posterSrc: "",
   },
@@ -26,7 +26,7 @@ const languages = [
     id: "jp",
     name: "日本語",
     flag: "🇯🇵",
-    title: "日本語を話す 디지털ツイン",
+    title: "日本語を話す デジタルツイン",
     description: "일본 시장을 위한 자연스러운 일본어 립싱크와 보이스를 제공합니다.",
     videoSrc: "/videos/japanese.mp4",
     posterSrc: "",
@@ -54,7 +54,13 @@ export function DemoSlideSection() {
             하나의 촬영으로, 전 세계 언어로
           </h2>
           <p className="mt-4 text-lg text-[#6B7280] max-w-2xl mx-auto">
-            동일 인물이 한국어, 영어, 일본어로 자연스럽게 말하는 영상을 확인해보세요.
+            <span className="sm:hidden">
+              <span className="block">동일 인물이 한국어, 영어, 일본어로</span>
+              <span className="block">자연스럽게 말하는 영상을 확인해보세요.</span>
+            </span>
+            <span className="hidden sm:inline">
+              동일 인물이 한국어, 영어, 일본어로 자연스럽게 말하는 영상을 확인해보세요.
+            </span>
           </p>
         </motion.div>
 
@@ -71,7 +77,7 @@ export function DemoSlideSection() {
                   : "bg-white text-[#6B7280] border border-[#E5E7EB] hover:bg-[#F9FAFB]"
               }`}
             >
-              <span className="mr-2">{lang.flag}</span>
+              <span className="mr-2 text-lg">{lang.flag}</span>
               {lang.name}
             </button>
           ))}
