@@ -71,14 +71,14 @@ export function DemoSlideSection() {
               key={lang.id}
               type="button"
               onClick={() => setActiveLanguage(lang.id)}
-              className={`px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
+              className={`flex flex-col sm:flex-row items-center px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
                 activeLanguage === lang.id
                   ? "bg-[#111111] text-white"
                   : "bg-white text-[#6B7280] border border-[#E5E7EB] hover:bg-[#F9FAFB]"
               }`}
             >
-              <span className="mr-2 text-lg">{lang.flag}</span>
-              {lang.name}
+              <span className="text-lg sm:mr-2">{lang.flag}</span>
+              <span className="leading-tight">{lang.name}</span>
             </button>
           ))}
         </div>

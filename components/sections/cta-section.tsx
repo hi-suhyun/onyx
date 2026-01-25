@@ -53,9 +53,16 @@ export function CTASection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight text-balance">
-            IP의 가치는 보존하고,
-            <br />
-            <span className="text-white/60">비즈니스는 무한히 확장합니다.</span>
+            <span className="sm:hidden">
+              <span className="block">IP의 가치는 보존하고,</span>
+              <span className="block">비즈니스는 무한히</span>
+              <span className="block text-white/60">확장합니다.</span>
+            </span>
+            <span className="hidden sm:inline">
+              IP의 가치는 보존하고,
+              <br />
+              <span className="text-white/60">비즈니스는 무한히 확장합니다.</span>
+            </span>
           </h2>
           <p className="mt-6 text-lg text-white/60 max-w-xl mx-auto">
             <span className="sm:hidden">

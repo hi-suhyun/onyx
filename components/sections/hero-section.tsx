@@ -42,9 +42,16 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="mt-8 text-lg md:text-xl text-[#6B7280] leading-relaxed max-w-2xl mx-auto text-pretty"
         >
-          오닉스(Onyx)는 스타의 IP 가치를 보존하며,
-          <br />
-          물리적 한계를 넘어선 압도적 생산성을 제공합니다.
+          <span className="sm:hidden">
+            <span className="block">오닉스(Onyx)는 스타의 IP 가치를 보존하며,</span>
+            <span className="block">물리적 한계를 넘어선</span>
+            <span className="block">압도적 생산성을 제공합니다.</span>
+          </span>
+          <span className="hidden sm:inline">
+            오닉스(Onyx)는 스타의 IP 가치를 보존하며,
+            <br />
+            물리적 한계를 넘어선 압도적 생산성을 제공합니다.
+          </span>
         </motion.p>
 
         <motion.div
