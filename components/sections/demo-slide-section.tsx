@@ -77,7 +77,7 @@ export function DemoSlideSection() {
                   : "bg-white text-[#6B7280] border border-[#E5E7EB] hover:bg-[#F9FAFB]"
               }`}
             >
-              <span className="text-lg sm:mr-2">{lang.flag}</span>
+              {lang.flag ? <span className="text-lg sm:mr-2">{lang.flag}</span> : null}
               <span className="leading-tight">{lang.name}</span>
             </button>
           ))}
