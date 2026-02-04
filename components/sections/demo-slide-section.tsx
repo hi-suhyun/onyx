@@ -27,7 +27,7 @@ const languages = [
     name: "VIP영상",
     flag: "",
     title: "VIP 전용 맞춤 메시지",
-    description: "프리미엄 고객을 위한 전용 안내 및 환영 영상을 제공합니다.",
+    description: "이름만 넣으세요. VIP 고객 한 분 한 분의 이름을 부르는 전용 안내 영상이 자동으로 생성됩니다.",
     videoSrc: "/videos/vip.mp4",
     posterSrc: "",
   },
