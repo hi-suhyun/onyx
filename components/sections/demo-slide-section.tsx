@@ -7,7 +7,7 @@ const languages = [
   {
     id: "ko",
     name: "홈페이지 영상",
-    flag: "🏠",
+    flag: "",
     title: "메인 홈페이지 소개 영상",
     description: "브랜드 핵심 메시지를 담은 메인 페이지용 데모 영상입니다.",
     videoSrc: "/videos/main_homepage.mp4",
@@ -16,7 +16,7 @@ const languages = [
   {
     id: "en",
     name: "DID영상",
-    flag: "🪪",
+    flag: "",
     title: "DID 디스플레이 목업 영상",
     description: "현장 사이니지에 최적화된 DID용 시연 영상을 보여줍니다.",
     videoSrc: "/videos/did_mockup.mp4",
@@ -25,7 +25,7 @@ const languages = [
   {
     id: "jp",
     name: "VIP영상",
-    flag: "👑",
+    flag: "",
     title: "VIP 전용 맞춤 메시지",
     description: "프리미엄 고객을 위한 전용 안내 및 환영 영상을 제공합니다.",
     videoSrc: "/videos/vip.mp4",
@@ -51,15 +51,15 @@ export function DemoSlideSection() {
             Multilingual Demo
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#111111] tracking-tight text-balance">
-            하나의 촬영으로, 전 세계 언어로
+            목적에 맞춘 다양한 데모 영상
           </h2>
           <p className="mt-4 text-lg text-[#6B7280] max-w-2xl mx-auto">
             <span className="sm:hidden">
-              <span className="block">동일 인물이 한국어, 영어, 일본어로</span>
-              <span className="block">자연스럽게 말하는 영상을 확인해보세요.</span>
+              <span className="block">홈페이지, DID, VIP 등</span>
+              <span className="block">용도별 시연 영상을 확인해보세요.</span>
             </span>
             <span className="hidden sm:inline">
-              동일 인물이 한국어, 영어, 일본어로 자연스럽게 말하는 영상을 확인해보세요.
+              홈페이지, DID, VIP 등 용도별 시연 영상을 확인해보세요.
             </span>
           </p>
         </motion.div>
